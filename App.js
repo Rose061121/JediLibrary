@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react'
 import { View } from 'react-native';
-import BookCover from './src/components/BookCover';
+import BookList from './src/containers/BookList'
 
 const styles = {
   container: {
@@ -15,7 +15,7 @@ const styles = {
 export default function App() {
   return (
     <View style={styles.container}>
-      <BookCover />
+      <BookList />
       <StatusBar style='auto' />
     </View>
   );
