@@ -1,14 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react'
-import { View } from 'react-native';
+import { View, Dimensions } from 'react-native';
 import BookList from './src/containers/BookList'
 
 const styles = {
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    
   },
 };
 
