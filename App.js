@@ -1,23 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react'
-import { View, Dimensions } from 'react-native';
+import { View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import BookList from './src/containers/BookList'
 
-const styles = {
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    
-  },
-};
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <BookList />
-      <StatusBar style='auto' />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="BookList" component={BookList}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+
 
 
